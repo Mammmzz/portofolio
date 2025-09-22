@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* CSS khusus untuk nama panjang di ProfileCard */
+.pc-details h3 {
+  font-size: min(3.8svh, 1.9em) !important;
+  letter-spacing: -0.02em;
+  line-height: 1.1 !important;
+  padding: 0 20px !important;
+}
+
+/* Kustomisasi ProfileCard */
+.profile-card-custom .pc-details h3 {
+  font-size: min(3.5svh, 1.8em) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.03em;
+  padding-top: 5px !important;
+}
+
+.profile-card-custom .pc-details p {
+  margin-top: 8px !important;
+}
+
+/* Kustomisasi untuk nama yang sangat panjang */
+.long-name .pc-details {
+  top: 1.5em !important;
+}
+
+.long-name .pc-details h3 {
+  font-size: min(3.4svh, 1.7em) !important;
+  letter-spacing: -0.04em;
+  line-height: 1.05 !important;
+  padding: 0 10px !important;
+  padding-top: 0 !important;
+  word-spacing: -0.05em;
+}
+
+.long-name .pc-details p {
+  margin-top: 5px !important;
+}
+
+@media (max-width: 480px) {
+  .pc-details h3 {
+    font-size: min(3.2svh, 1.5em) !important;
+    padding: 0 15px !important;
+  }
+  
+  .profile-card-custom .pc-details h3 {
+    font-size: min(3svh, 1.4em) !important;
+  }
+
+  .long-name .pc-details {
+    top: 2em !important;
+  }
+
+  .long-name .pc-details h3 {
+    font-size: min(2.9svh, 1.3em) !important;
+    padding: 0 8px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .pc-details h3 {
+    font-size: min(2.8svh, 1.2em) !important;
+    padding: 0 10px !important;
+  }
+  
+  .profile-card-custom .pc-details h3 {
+    font-size: min(2.6svh, 1.1em) !important;
+  }
+
+  .long-name .pc-details {
+    top: 2.2em !important;
+  }
+
+  .long-name .pc-details h3 {
+    font-size: min(2.5svh, 1.1em) !important;
+    padding: 0 5px !important;
+  }
+}
+
+/* Additional mobile responsiveness improvements */
+@media (max-width: 768px) {
+  /* Improve mobile scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better touch targets */
+  button, .pc-contact-btn, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better mobile spacing */
+  .hero {
+    padding-top: 1rem !important;
+    min-height: 100vh !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Reduce margins for very small screens */
+  .mt-32 {
+    margin-top: 4rem !important;
+  }
+  
+  .mt-20 {
+    margin-top: 3rem !important;
+  }
+  
+  /* Better button sizing for mobile */
+  .pc-contact-btn {
+    min-height: 40px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  /* Extra small mobile adjustments */
+  .hero {
+    min-height: 95vh !important;
+  }
+  
+  .mt-32 {
+    margin-top: 3rem !important;
+  }
+  
+  .mt-20 {
+    margin-top: 2.5rem !important;
+  }
+}
+
+/* Coming Soon Popup Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3) translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05) translateY(0);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-bounceIn {
+  animation: bounceIn 0.5s ease-out;
+}
